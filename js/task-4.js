@@ -5,7 +5,6 @@ formSubmit.addEventListener('submit', event => {
 
   const emailValue = document.querySelector('input[name="email"]').value;
   const passwordValue = document.querySelector('input[name="password"]').value;
-  // Перевіряємо, чи заповнені всі поля
   if (!emailValue || !passwordValue) {
     return alert('All form fields must be filled in');
   }
@@ -15,6 +14,5 @@ formSubmit.addEventListener('submit', event => {
     password: passwordValue,
   });
 
-  // Очищуємо форму після успішної обробки
   formSubmit.reset();
 });

@@ -1,14 +1,12 @@
 const input = document.querySelector('input');
 const create = document.querySelector('button[data-create]');
 create.style.backgroundColor = '#4e75ff';
-// Зміна кольору при наведенні
 create.addEventListener('mouseover', () => {
-  create.style.backgroundColor = '#6c8cff'; // колір при наведенні
+  create.style.backgroundColor = '#6c8cff';
 });
 
-// Повернення початкового кольору при відведенні курсора
 create.addEventListener('mouseout', () => {
-  create.style.backgroundColor = '#4e75ff'; // повертаємо початковий колір
+  create.style.backgroundColor = '#4e75ff';
 });
 
 const destroy = document.querySelector('button[data-destroy]');
@@ -53,7 +51,6 @@ function createMarkup() {
 function createBoxes(amount) {
   clearAll();
 
-  // Використовуємо фрагмент для додавання всіх елементів за одну операцію
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
@@ -66,7 +63,6 @@ function createBoxes(amount) {
     sizes += 10;
   }
 
-  // Додаємо всі елементи до DOM за одну операцію
   boxes.append(fragment);
 }
 
